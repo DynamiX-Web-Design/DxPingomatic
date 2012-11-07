@@ -1,0 +1,241 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \DxPingomatic</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu"></ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">1</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Construct an instance with the title, blogurl, and rssurl."><span class="description">Construct an instance with the title, blogurl, and rssurl.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#__get" title="__get :: Get a value for any of the pingomatic properties"><span class="description">Get a value for any of the pingomatic properties</span><pre>__get()</pre></a></li>
+<li class="method public "><a href="#__set" title="__set :: Set a pingomatic value through the magic `__set` function."><span class="description">Set a pingomatic value through the magic `__set` function.</span><pre>__set()</pre></a></li>
+<li class="method public "><a href="#enableAllServices" title="enableAllServices :: Notify all services (check all checkboxes)"><span class="description">Notify all services (check all checkboxes)</span><pre>enableAllServices()</pre></a></li>
+<li class="method public "><a href="#enableNoServices" title="enableNoServices :: Notify no services (check no checkboxes)"><span class="description">Notify no services (check no checkboxes)</span><pre>enableNoServices()</pre></a></li>
+<li class="method public "><a href="#ping" title="ping :: Ping the service."><span class="description">Ping the service.</span><pre>ping()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#buildURL" title="buildURL :: Build the url for calling pingomatic"><span class="description">Build the url for calling pingomatic</span><pre>buildURL()</pre></a></li>
+<li class="method protected "><a href="#shouldPing" title="shouldPing :: Determines if a ping should happen."><span class="description">Determines if a ping should happen.</span><pre>shouldPing()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24checkboxes" title="$checkboxes :: array $checkboxes List of properties that are checkboxes"><span class="description">array $checkboxes List of properties that are checkboxes</span><pre>$checkboxes</pre></a></li>
+<li class="property protected "><a href="#%24properties" title="$properties :: array $properties properties hash for GET request to pingomatic
+all checkbox properties are treated as boolean, but stored as 'on'/'off'"><span class="description">array $properties properties hash for GET request to pingomatic
+all checkbox properties are treated as boolean, but stored as 'on'/'off'</span><pre>$properties</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24pingomatic_url" title="$pingomatic_url :: string $pingomatic_url the base url for the GET request"><span class="description">string $pingomatic_url the base url for the GET request</span><pre>$pingomatic_url</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CDxPingomatic" id="\DxPingomatic"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/DxPingomatic.html">DxPingomatic</a>
+</li>
+</ul>
+<div href="../classes/DxPingomatic.html" class="element class">
+<p class="short_description">This class provides easy access to notifying the pingomatic service.</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>copyright</th>
+<td>2012 Dynamix Web Design, LLC</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">Whit Marbut</a></td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">http://creativecommons.org/licenses/by-sa/3.0/deed.en_US</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Construct an instance with the title, blogurl, and rssurl.</h2>
+<pre>__construct(string $title, string $blogurl, string $rssurl, boolean $check_all) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The rssurl is a required parameter with this class.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$blogurl</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$rssurl</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$check_all</h4>
+<code>boolean</code><p>(optional - default false) would you like submit to all services?</p>
+</div>
+</div></div>
+</div>
+<a name="__get" id="__get"></a><div class="element clickable method public __get" data-toggle="collapse" data-target=".__get .collapse">
+<h2>Get a value for any of the pingomatic properties</h2>
+<pre>__get(mixed $key) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code><p>the property key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>the value of the property or false for failure</div>
+</div></div>
+</div>
+<a name="__set" id="__set"></a><div class="element clickable method public __set" data-toggle="collapse" data-target=".__set .collapse">
+<h2>Set a pingomatic value through the magic `__set` function.</h2>
+<pre>__set(mixed $key, mixed $value) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Keys map to the <code>properties</code>
+hash.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code><p>the name of the value to set. In this case will always be a string</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>the value of the property</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>true for success</div>
+</div></div>
+</div>
+<a name="enableAllServices" id="enableAllServices"></a><div class="element clickable method public enableAllServices" data-toggle="collapse" data-target=".enableAllServices .collapse">
+<h2>Notify all services (check all checkboxes)</h2>
+<pre>enableAllServices() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="enableNoServices" id="enableNoServices"></a><div class="element clickable method public enableNoServices" data-toggle="collapse" data-target=".enableNoServices .collapse">
+<h2>Notify no services (check no checkboxes)</h2>
+<pre>enableNoServices() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="ping" id="ping"></a><div class="element clickable method public ping" data-toggle="collapse" data-target=".ping .collapse">
+<h2>Ping the service.</h2>
+<pre>ping() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>success</div>
+</div></div>
+</div>
+<a name="buildURL" id="buildURL"></a><div class="element clickable method protected buildURL" data-toggle="collapse" data-target=".buildURL .collapse">
+<h2>Build the url for calling pingomatic</h2>
+<pre>buildURL() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the url</div>
+</div></div>
+</div>
+<a name="shouldPing" id="shouldPing"></a><div class="element clickable method protected shouldPing" data-toggle="collapse" data-target=".shouldPing .collapse">
+<h2>Determines if a ping should happen.</h2>
+<pre>shouldPing() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Will not ping if the blogurl, title, and
+rssurl are not set</p></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>should ping?</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24checkboxes" id="$checkboxes"> </a><div class="element clickable property protected $checkboxes" data-toggle="collapse" data-target=".$checkboxes .collapse">
+<h2>array $checkboxes List of properties that are checkboxes</h2>
+<pre>$checkboxes </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24properties" id="$properties"> </a><div class="element clickable property protected $properties" data-toggle="collapse" data-target=".$properties .collapse">
+<h2>array $properties properties hash for GET request to pingomatic
+all checkbox properties are treated as boolean, but stored as 'on'/'off'</h2>
+<pre>$properties </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24pingomatic_url" id="$pingomatic_url"> </a><div class="element clickable property private $pingomatic_url" data-toggle="collapse" data-target=".$pingomatic_url .collapse">
+<h2>string $pingomatic_url the base url for the GET request</h2>
+<pre>$pingomatic_url </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-11-07T12:54:10-05:00.<br></footer></div>
+</div>
+</body>
+</html>

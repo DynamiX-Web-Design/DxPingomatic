@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="DxPingomatic.php" hash="5b63b84e9a762c6b0b43fee01cc198b5" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="Default">
+      <extends/>
+      <name>DxPingomatic</name>
+      <full_name>\DxPingomatic</full_name>
+      <docblock line="2">
+        <description><![CDATA[This class provides easy access to notifying the pingomatic service.]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="2" name="copyright" description="2012 Dynamix Web Design, LLC"/>
+        <tag line="2" name="author" description="Whit Marbut"/>
+        <tag line="2" name="license" description="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="13" namespace="global" package="Default">
+        <name>$properties</name>
+        <default><![CDATA[array('title' => '', 'blogurl' => '', 'rssurl' => '', 'chk_weblogscom' => '', 'chk_blogs' => '', 'chk_feedburner' => '', 'chk_newsgator' => '', 'chk_myyahoo' => '', 'chk_pubsubcom' => '', 'chk_blogdigger' => '', 'chk_weblogalot' => '', 'chk_newsisfree' => '', 'chk_topicexchange' => '', 'chk_google' => '', 'chk_tailrank' => '', 'chk_skygrid' => '', 'chk_collecta' => '', 'chk_superfeedr' => '')]]></default>
+        <docblock line="9">
+          <description><![CDATA[array $properties properties hash for GET request to pingomatic
+all checkbox properties are treated as boolean, but stored as 'on'/'off']]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="37" namespace="global" package="Default">
+        <name>$checkboxes</name>
+        <default><![CDATA[array('chk_weblogscom', 'chk_blogs', 'chk_feedburner', 'chk_newsgator', 'chk_myyahoo', 'chk_pubsubcom', 'chk_blogdigger', 'chk_weblogalot', 'chk_newsisfree', 'chk_topicexchange', 'chk_google', 'chk_tailrank', 'chk_skygrid', 'chk_collecta', 'chk_superfeedr')]]></default>
+        <docblock line="34">
+          <description><![CDATA[array $checkboxes List of properties that are checkboxes]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="global" package="Default">
+        <name>$pingomatic_url</name>
+        <default><![CDATA['http://pingomatic.com/ping/']]></default>
+        <docblock line="40">
+          <description><![CDATA[string $pingomatic_url the base url for the GET request]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="52" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="45">
+          <description><![CDATA[Construct an instance with the title, blogurl, and rssurl.]]></description>
+          <long-description><![CDATA[<p>The rssurl is a required parameter with this class.</p>]]></long-description>
+          <tag line="45" name="param" description="" type="string" variable="$title">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="45" name="param" description="" type="string" variable="$blogurl">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="45" name="param" description="" type="string" variable="$rssurl">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="45" name="param" description="(optional - default false) would you like submit to all services?" type="boolean" variable="$check_all">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="52">
+          <name>$title</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$blogurl</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$rssurl</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="52">
+          <name>$check_all</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="65" package="Default">
+        <name>enableAllServices</name>
+        <full_name>enableAllServices</full_name>
+        <docblock line="61">
+          <description><![CDATA[Notify all services (check all checkboxes)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="61" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="75" package="Default">
+        <name>enableNoServices</name>
+        <full_name>enableNoServices</full_name>
+        <docblock line="71">
+          <description><![CDATA[Notify no services (check no checkboxes)]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="71" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="88" package="Default">
+        <name>__set</name>
+        <full_name>__set</full_name>
+        <docblock line="81">
+          <description><![CDATA[Set a pingomatic value through the magic `__set` function.]]></description>
+          <long-description><![CDATA[<p>Keys map to the <code>properties</code>
+hash.</p>]]></long-description>
+          <tag line="81" name="param" description="the name of the value to set. In this case will always be a string" type="mixed" variable="$key">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="81" name="param" description="the value of the property" type="mixed" variable="$value">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="81" name="return" description="true for success" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="88">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="88">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="119" package="Default">
+        <name>__get</name>
+        <full_name>__get</full_name>
+        <docblock line="114">
+          <description><![CDATA[Get a value for any of the pingomatic properties]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="114" name="param" description="the property key" type="mixed" variable="$key">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="114" name="return" description="the value of the property or false for failure" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="119">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="139" package="Default">
+        <name>ping</name>
+        <full_name>ping</full_name>
+        <docblock line="135">
+          <description><![CDATA[Ping the service.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="135" name="return" description="success" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="156" package="Default">
+        <name>buildURL</name>
+        <full_name>buildURL</full_name>
+        <docblock line="152">
+          <description><![CDATA[Build the url for calling pingomatic]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="152" name="return" description="the url" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="165" package="Default">
+        <name>shouldPing</name>
+        <full_name>shouldPing</full_name>
+        <docblock line="160">
+          <description><![CDATA[Determines if a ping should happen.]]></description>
+          <long-description><![CDATA[<p>Will not ping if the blogurl, title, and
+rssurl are not set</p>]]></long-description>
+          <tag line="160" name="return" description="should ping?" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file DxPingomatic.php</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

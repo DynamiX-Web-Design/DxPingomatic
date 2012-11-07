@@ -1,9 +1,9 @@
 <?php
 /**
-* Provide easy access to the pingomatic service
-* @author Whit Marbut
+* This class provides easy access to notifying the pingomatic service.
 * @copyright 2012 Dynamix Web Design, LLC
-* @license Creative Commons Attribution-ShareAlike 3.0 Unported 
+* @author Whit Marbut
+* @license http://creativecommons.org/licenses/by-sa/3.0/deed.en_US 
 */
 class DxPingomatic {
 	/**
@@ -43,7 +43,7 @@ class DxPingomatic {
 	private $pingomatic_url = 'http://pingomatic.com/ping/';
 
 	/**
-	* Construct an instance with the title, blogurl, and rssurl
+	* Construct an instance with the title, blogurl, and rssurl. The rssurl is a required parameter with this class. 
 	* @param string $title
 	* @param string $blogurl
 	* @param string $rssurl
